@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodies – Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🍴 Foodies</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="menu-page">
+    <h2>Our Menu</h2>
+    <input type="text" id="search" placeholder="Search Dish..." onkeyup="filterItems()">
+
+    <div class="menu-container" id="menuItems">
+      <div class="menu-item" data-name="Pizza">
+        <img src="pizza.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>₹250</p>
+        <button onclick="addToCart('Pizza',250,'pizza.jpg')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Pasta">
+        <img src="pasta.jpg" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>₹180</p>
+        <button onclick="addToCart('Pasta',180,'pasta.jpg')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Burger">
+        <img src="burgger.avif" alt="Burger">
+        <h3>Burger</h3>
+        <p>₹120</p>
+        <button onclick="addToCart('Burger',120,'burgger.avif')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Sandwich">
+        <img src="sandwich.jpg" alt="Sandwich">
+        <h3>Sandwich</h3>
+        <p>₹90</p>
+        <button onclick="addToCart('Sandwich',90,'sandwich.jpg')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Biryani">
+        <img src="biryani.avif" alt="Biryani">
+        <h3>Biryani</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Biryani',150,'biryani.avif')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Cake">
+        <img src="cake.avif" alt="Cake">
+        <h3>Cake</h3>
+        <p>₹340</p>
+        <button onclick="addToCart('Cake',340,'cake.avif')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Chhole Bhature">
+        <img src="chhole_bhature.jpg" alt="Chhole Bhature">
+        <h3>Chhole Bhature</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Chhole Bhature',150,'chhole_bhature.jpg')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Gulab Jamun">
+        <img src="gulab_jamun.webp" alt="Gulab Jamun">
+        <h3>Gulab Jamun</h3>
+        <p>₹460</p>
+        <button onclick="addToCart('Gulab Jamun',460,'gulab_jamun.webp')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Caesar Salad">
+        <img src="Caesar Salad.webp" alt="Caesar Salad">
+        <h3>Caesar Salad</h3>
+        <p>₹220</p>
+        <button onclick="addToCart('Caesar Salad',220,'Caesar Salad.webp')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Donut">
+        <img src="Donut.webp" alt="Donut">
+        <h3>Donut</h3>
+        <p>₹180</p>
+        <button onclick="addToCart('Donut',180,'Donut.webp')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Momo">
+        <img src="momos.avif" alt="Momo">
+        <h3>momo</h3>
+        <p>₹90</p>
+        <button onclick="addToCart('Momo',90,'momos.avif')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Pastry">
+        <img src="pastry.webp" alt="Pastry">
+        <h3>Pastry</h3>
+        <p>₹250</p>
+        <button onclick="addToCart('Pastry',250,'pastry.webp')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Ramen">
+        <img src="Ramen.png" alt="Ramen">
+        <h3>Ramen</h3>
+        <p>₹360</p>
+        <button onclick="addToCart('Ramen',360,'ramen.png')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Strawberry ice cream">
+        <img src="strawberry-ice-cream.jpg" alt="Strawberry ice cream">
+        <h3>Strawberry ice cream</h3>
+        <p>₹170</p>
+        <button onclick="addToCart('Strawberry ice cream',170,'strawberry-ice-cream.jpg')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Sushi">
+        <img src="Sushi.webp" alt="Sushi">
+        <h3>Sushi</h3>
+        <p>₹350</p>
+        <button onclick="addToCart('Sushi',350,'Sushi.webp')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item" data-name="Spaghetti">
+        <img src="Spaghetti.webp" alt="Spaghetti">
+        <h3>Spaghetti</h3>
+        <p>₹199</p>
+        <button onclick="addToCart('Spaghetti',199,'Spaghetti.webp')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>We bring your favorite dishes from top restaurants straight to your doorstep. 
+       Our mission is to make every meal memorable with great taste and quick delivery.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Foodies | All Rights Reserved.</p>
+  </footer>
+
+  <!-- Floating Cart Icon -->
+  <div id="cart-icon" onclick="toggleCart()">🛒</div>
+
+  <!-- Cart Popup -->
+  <div id="cart-popup" class="cart-popup">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <h4 id="cart-total">Total: ₹0</h4>
+    <button class="remove-btn" onclick="clearCart()">Remove All</button>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  </div>
+
+  <!-- Success Popup -->
+  <div id="success-popup" class="success-popup">✅ Item added to cart!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
